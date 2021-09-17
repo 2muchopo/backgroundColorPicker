@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorPicker</title>
+</head>
+<style>
+    body{background-color: lightseagreen;}
+    button{width: 200px;
+    height: 50px;
+    background-color: black;
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+    }
+    button:hover{background-color: powderblue;
+    color:black;}
+    .butting{text-align: center;
+    display: flex;
+flex-direction: column;justify-content: center;
+align-items: center;
+margin: 200px auto;}
+
+</style>
+<body>
+
+   <div class="butting">
+    <button id= button>Click to Pick Color</button>
+    <h1 id="color" style="text-align:center;color: whitesmoke; background-color:royalblue; width:200px; height: 50px"></h1>
+   
+   </div>
+    
+</body>
+<script>
+    var button = document.getElementById('button');
+    button.addEventListener('click', function(){
+        var a = Math.floor(Math.random()*10)
+        var b = Math.floor(Math.random()*10)
+        var c = Math.floor(Math.random()*10)
+        var d = Math.floor(Math.random()*10)
+        var e = Math.floor(Math.random()*10)
+        var f = Math.floor(Math.random()*10)
+        console.log(a,b,c,d,e,f)
+
+        var y = "#" + a + b + c + d + e + f;
+
+        console.log(y)
+
+        document.body.style.backgroundColor = y; 
+
+        var color = document.getElementById('color');
+        color.innerText = y   
+    })
+    
+</script>
+</html>
